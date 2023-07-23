@@ -13,14 +13,19 @@
     <main>
         <div class="body"><div class="sidebar">
             <img src="images/freeskout.png" alt="logo" class="logo">
-            <i class="fa fa-search"></i>
+           
             <nav class="nav">
                 <ul class="ul">
-                    <li><a href="index.html"><i class="fa fa-home" ></i></a></li>
-                    <li><a href="#"><i class="fa fa-folder"></i></a></li>
-                    <li><a href="#"><img src="images/list.jpg" style="width: 18px; border-radius: 50px;" alt=""></a></li>
-                    <li><a href="#"><i class="fa fa-user"></i></a></li>
+                    <li><a href="index.html"><i class="fa fa-home" style="font-size: 50px;"></i></a></li>
+                    <li><a href="#"><i class="fa fa-file"  style="font-size: 50px;"></i></a></li>
+                    <li><a><i class="fa fa-folder" style="font-size: 50px;"></i></a></li>
+                    <li><a href="#"><i class="fa fa-user"  style="font-size: 50px;"></i></a></li>
+                    <li><a href="#"><i class="fa fa-search"  style="font-size: 50px;"></i></a></li>
                  
+                    <li class="down">
+                      <i class="fa fa-bell"  style="font-size: 50px;"></i>
+                      <i class="fa fa-arrow-left"  style="font-size: 50px;"></i>
+                    </li>
                 </ul>
              <!--    <div class="search-bar">
                     <input type="text" placeholder="Search..." />
@@ -30,7 +35,7 @@
         </div>
             <div class="home">
                 <div class="psn">
-                    <img src="images/download.jpg" style="padding: 10px; border-radius: 50%;height: 100px; width: 100px;" alt="">
+                    <img src="images/me.jpg" style="padding: 10px; border-radius: 50%;height: 100px; width: 100px;" alt="">
                 <h1 class="h"> Hi Mike,<p style=" font-size: small; color: rgb(172, 154, 154);">Welcome back.</p></h1>
                 </div>
                 <div class="cash">
@@ -86,15 +91,12 @@
             </div>
           
             <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
-
 <canvas id="myChart" style="width:200px;max-width: 400px; height:150px; border: none;  ">
    </canvas>
-
 <script>
 const xValues = [20,25,30,35,40,60,65];
 const yValues = [0,50,100,150,200,250,300, 350];
 const barColors = ["linear blue"];
-
 new Chart("myChart", {
   type: "bar",
   data: {
@@ -174,7 +176,6 @@ new Chart("myChart", {
       <text x="18" y="20.35" class="percentage">60%</text>
     </svg>
   </div>
-
   <div class="single-chart">
     <svg viewBox="0 0 36 36" class="circular-chart blue">
       <path class="circle-bg"
