@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/oip.jpeg" style="border-radius: 50px;">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -11,7 +12,7 @@
     <header></header>
     <main>
         <div class="body"><div class="sidebar">
-            <img src="../../Web/its/images/freeskout.png" alt="logo" class="logo">
+            <img src="images/freeskout.png" alt="logo" class="logo">
             <i class="fa fa-search"></i>
             <nav class="nav">
                 <ul class="ul">
@@ -19,6 +20,7 @@
                     <li><a href="#"><i class="fa fa-folder"></i></a></li>
                     <li><a href="#"><img src="images/list.jpg" style="width: 18px; border-radius: 50px;" alt=""></a></li>
                     <li><a href="#"><i class="fa fa-user"></i></a></li>
+                 
                 </ul>
              <!--    <div class="search-bar">
                     <input type="text" placeholder="Search..." />
@@ -28,7 +30,7 @@
         </div>
             <div class="home">
                 <div class="psn">
-                    <img src="../../portfolio/src/assets/images/me.jpg" style="padding: 10px; border-radius: 50%;height: 100px; width: 100px;" alt="">
+                    <img src="/portfolio/src/assets/images/me.jpg" style="padding: 10px; border-radius: 50%;height: 100px; width: 100px;" alt="">
                 <h1 class="h"> Hi Mike,<p style=" font-size: small; color: rgb(172, 154, 154);">Welcome back.</p></h1>
                 </div>
                 <div class="cash">
@@ -43,7 +45,7 @@
                     $1,892 <br>
                     <small>Total interest</small>
                 </h4>
-                <button>I want to <select name="" id=""></select></button>
+                <button>I want to <select name="" id="select"></select></button>
                 </div>
                 <div class="transact">   
                     <h3>Recent Transactions</h3>
@@ -69,19 +71,151 @@
                     <h2>Starting Year 2056</h2>
                     <div class="flex">
                         <h3>$300,00 <br>
-                            <input type="text" name="text" placeholder="My goal">
+                            <input type="text" name="text" placeholder="My goal" class="input">
                         </h3>
                         <h3>59% <br>
-                            <input type="text" name="text" placeholder="Goal Achieved">
+                            <input type="text" name="text" placeholder="Goal Achieved" class="input">
                         </h3>
-                         <h3>$300                        <br>
-                            <input type="text" name="text" placeholder="Estimated Monthly Income">
+                         <h3>$300 <br>
+                            <input type="text" name="text" placeholder="Estimated Monthly Income" class="input">
                         </h3>
                         
                     </div>
                     <div class="graph">
-                        <h2>COntribution Overtime</h2>
                     </div>
+            </div>
+          
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+<canvas id="myChart" style="width:200px;max-width: 400px; height:150px; border: none;  ">
+   </canvas>
+
+<script>
+const xValues = [20,25,30,35,40,60,65];
+const yValues = [0,50,100,150,200,250,300, 350];
+const barColors = ["linear blue"];
+
+new Chart("myChart", {
+  type: "bar",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    legend: {display: false},
+    title: {
+      display: true,
+      text: "Contributions Overtime"
+    }
+  }
+});
+</script>
+<div class="com"><h1>How do i compare to my peers?</h1>
+    <small class="no">This Number represent current goal Achievements.</small>
+    <div class="peer">
+     <div class="label">
+        <label for="Age"> Age :
+            <select name="Age" id="Age">
+                <option value="">Under 30</option>
+                <option value="">31-40</option>
+                <option value="">41 above</option>
+            </select>
+        </label>
+        <label for="Age"> Salary :
+            <select name="Age" id="Age">
+                <option value="">k 20 - k 30</option>
+                <option value="">k 31 - k 40</option>
+                <option value="">k 41 above</option>
+            </select>
+        </label>
+        <label for="Age"> Gender :
+            <select name="Age" id="Age">
+                <option value="">Male</option>
+                <option value="">Female</option>
+                <option value="">Non-binary</option>
+                <option value="">Prefer not to say</option>
+            </select>
+        </label>
+     </div>
+<div class="flex-wrapper">
+  <div class="single-chart">
+    <svg viewBox="0 0 36 36" class="circular-chart orange">
+      <path class="circle-bg"
+        d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"
+      />
+      <path class="circle"
+        stroke-dasharray="30, 100"
+        d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"
+      />
+      <text x="18" y="20.35" class="percentage">30%</text>
+    </svg>
+  </div>
+  
+  <div class="single-chart">
+    <svg viewBox="0 0 36 36" class="circular-chart green">
+      <path class="circle-bg"
+        d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"
+      />
+      <path class="circle"
+        stroke-dasharray="60, 100"
+        d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"
+      />
+      <text x="18" y="20.35" class="percentage">60%</text>
+    </svg>
+  </div>
+
+  <div class="single-chart">
+    <svg viewBox="0 0 36 36" class="circular-chart blue">
+      <path class="circle-bg"
+        d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"
+      />
+      <path class="circle"
+        stroke-dasharray="90, 100"
+        d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"
+      />
+      <text x="18" y="20.35" class="percentage">90%</text>
+    </svg>
+  </div>
+</div>
+    </div>
+</div>
+        </div>
+        <div class="end">
+            <div class="range">
+                <h1 class="re">
+                    Retirement Strategy
+                </h1>
+                <p>Employee Contribution</p>
+                <input type="range" value="75" name="range" id="range">
+                <p>Retirement Age</p>
+                <input type="range" name="range" value="90" id="range">
+                <p>Employee Contribution    8.4%</p>
+                <p>interest Rate     5%</p>
+                <button class="btn">Upgrade</button><br>
+                <a href="#">View Help Docs ></a>
+            </div>
+            <div class="learn">
+                <h4 class="j">
+                    <p style="color: #e6e6e6; padding-top: 20px;">Are you considering a</p>
+                    <b>Housing Advance</b> <br>
+                    <small>Limited time reduced interest</small><br>
+                    <a href="#">Learn more ></a>
+                </h4>
             </div>
         </div>
         </div>

@@ -3,3 +3,4 @@ function search() {
     window.location.href = "https://www.google.com/search?q=" + keyword;
   }
   document.querySelector(".search-bar button").addEventListener("click", search);
+  
